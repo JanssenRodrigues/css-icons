@@ -1,0 +1,223 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center; }
+
+div {
+  margin: 25px 10px; }
+
+.facebook {
+  height: 100px;
+  width: 100px;
+  background-color: #3b5998;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0px 0px 5px 0; }
+  .facebook span {
+    content: "";
+    display: block;
+    width: 38%;
+    height: 15%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 38%;
+    left: 40%; }
+    .facebook span:after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      bottom: 0;
+      right: -10px;
+      transform: skew(-10deg); }
+  .facebook.white {
+    background-color: white; }
+    .facebook.white span {
+      background-color: #3b5998; }
+      .facebook.white span:after {
+        background-color: #3b5998; }
+    .facebook.white:before {
+      border-color: #3b5998; }
+  .facebook:before {
+    content: "";
+    display: block;
+    width: 23%;
+    border-top: 20px solid white;
+    border-left: 20px solid white;
+    border-radius: 40px 0px 0px 0px/40px 80px;
+    height: 67%;
+    position: absolute;
+    bottom: 0;
+    left: 50%; }
+
+.instagram {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  box-shadow: 0px 0px 5px 0;
+  border-radius: 15px;
+  position: relative; }
+  .instagram.black {
+    background: none; }
+    .instagram.black span {
+      border-color: #000; }
+      .instagram.black span:before {
+        border-color: #000; }
+      .instagram.black span:after {
+        background-color: #000; }
+  .instagram.white {
+    background: transparent; }
+    .instagram.white span {
+      border-color: gray; }
+      .instagram.white span:before {
+        border-color: gray; }
+      .instagram.white span:after {
+        background-color: gray; }
+  .instagram.circle {
+    border-radius: 100%; }
+    .instagram.circle span {
+      width: 60%;
+      height: 60%; }
+  .instagram span {
+    display: block;
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%); }
+    .instagram span:before {
+      content: '';
+      display: block;
+      border: 5px solid #fff;
+      border-radius: 100%;
+      width: 40%;
+      height: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%); }
+    .instagram span:after {
+      content: '';
+      display: block;
+      background-color: #fff;
+      border-radius: 100%;
+      width: 15%;
+      height: 15%;
+      position: absolute;
+      top: 10%;
+      right: 10%; }
+
+.youtube {
+  display: inline-block;
+  background-color: #ff0000;
+  border-radius: 50% / 11.6%;
+  position: relative;
+  width: 100px;
+  height: 80px; }
+  .youtube:after {
+    content: '';
+    position: absolute;
+    top: 9.5%;
+    bottom: 9.5%;
+    right: -4.5%;
+    left: -4.5%;
+    background: inherit;
+    border-radius: 6.2% / 57%; }
+  .youtube:before {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    z-index: 1;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-color: white; }
+  .youtube.circle {
+    border-radius: 100%;
+    height: 100px; }
+    .youtube.circle:after {
+      display: none; }
+
+.pokeball {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  border: 3px solid black;
+  background: linear-gradient(to bottom, #ed3730 0%, #ed3730 50%, #000000 50%, white 50%, white 100%);
+  box-sizing: border-box;
+  position: relative; }
+  .pokeball .middle-line {
+    display: block;
+    border: solid 85px #4e4e50;
+    border-color: #4e4e50 transparent transparent transparent;
+    border-radius: 50%/80px 50px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%); }
+
+.house {
+  color: #e54644;
+  background-color: currentColor;
+  width: 100px;
+  height: 70px;
+  margin-right: 100px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative; }
+  .house.dark-green {
+    color: #2b6939; }
+  .house.green {
+    color: #98c632; }
+  .house:before, .house:after {
+    content: '';
+    display: block;
+    background-color: currentColor;
+    width: 100%;
+    height: 10px;
+    position: absolute; }
+  .house:before {
+    border-bottom-left-radius: 25px;
+    top: -28px;
+    left: -32px;
+    transform: rotate(-45deg); }
+  .house:after {
+    border-bottom-right-radius: 25px;
+    top: -28px;
+    right: -32px;
+    transform: rotate(45deg); }
+  .house .wall {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid currentColor;
+    position: absolute;
+    top: -70%; }
+  .house p {
+    margin: 0;
+    font-family: 'OpenSans';
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff; }
+
+/*# sourceMappingURL=style.css.map */

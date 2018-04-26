@@ -1,0 +1,340 @@
+// position: absolute;
+// top: 50%;
+// left: 50%;
+// bottom: 50%;
+// right: 50%;
+// transform: translate(-50%, -50%);
+body{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+div{
+	margin: 25px 10px;
+}
+.facebook{
+	height: 100px;
+	width: 100px;
+	background-color: #3b5998;
+	border-radius: 15px;
+	position: relative;
+	box-shadow: 0px 0px 5px 0;
+	span{
+		content: "";
+		display: block;
+		width: 38%;
+		height: 15%;
+		background-color: #fff;
+		position: absolute;
+		bottom: 38%;
+		left: 40%;
+		&:after{
+			content: "";
+			display: block;
+			width: 30%;
+			height: 100%;
+			background-color: #ffffff;
+			position: absolute;
+			bottom: 0;
+			right: -10px;
+			transform: skew(-10deg);
+		}
+	}
+	&.white{
+		background-color: white;
+		span{
+			background-color: #3b5998;
+			&:after{
+				background-color: #3b5998;
+			}
+		}
+		&:before{
+			border-color: #3b5998;
+		}
+	}
+	&:before{
+		content: "";
+		display: block;
+		width: 23%;
+		border-top: 20px solid white;
+		border-left: 20px solid white;
+		border-radius: 40px 0px 0px 0px/40px 80px;
+		height: 67%;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+	}
+}
+
+.instagram{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+	box-shadow: 0px 0px 5px 0;
+	border-radius: 15px;
+	position: relative;
+	&.black{
+		background: none;
+		span{
+			border-color: #000;
+			&:before{
+				border-color: #000;
+			}
+			&:after{
+				background-color: #000;
+			}
+		}
+	}
+	&.white{
+		background: transparent;
+		span{
+			border-color: gray;
+			&:before{
+				border-color: gray;
+			}
+			&:after{
+				background-color: gray;
+			}
+		}
+	}
+	&.circle {
+		border-radius: 100%;
+		span{
+			width: 60%;
+			height: 60%;
+		}
+	}
+	span{
+		display: block;
+		width: 70%;
+		height: 70%;
+		border-radius: 20px;
+		border: 5px solid #fff;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		bottom: 50%;
+		right: 50%;
+		transform: translate(-50%, -50%);
+		&:before{
+			content: '';
+			display: block;
+			border: 5px solid #fff;
+			border-radius: 100%;
+			width: 40%;
+			height: 40%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			bottom: 50%;
+			right: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:after{
+			content: '';
+			display: block;
+			background-color: #fff;
+			border-radius: 100%;
+			width: 15%;
+			height: 15%;
+			position: absolute;
+			top: 10%;
+			right: 10%;
+		}
+	}
+}
+
+.youtube{
+	display: inline-block;
+	background-color: #ff0000;
+	border-radius: 50% / 11.6%;
+	position: relative;
+	width: 100px;
+	height: 80px;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 9.5%;
+		bottom: 9.5%;
+		right: -4.5%;
+		left: -4.5%;
+		background: inherit;
+		border-radius: 6.2% / 57%;
+	}
+	&:before{
+		content: '';
+		display: block;
+		width: 40%;
+		height: 50%;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		bottom: 50%;
+		left: 50%;
+		transform: translate(-35%, -50%);
+		z-index: 1;
+		-webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+		clip-path: polygon(0 0, 100% 50%, 0 100%);
+		background-color: white;
+	}
+	&.circle{
+		border-radius: 100%;
+		height: 100px;
+		&:after{
+			display: none;
+		}
+	}
+}
+
+.pokeball{
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	border: 3px solid black;
+	background: linear-gradient(to bottom, #ed3730 0%, #ed3730 50%, #000000 50%, white 50%, white 100%);
+	box-sizing: border-box;
+	position: relative;
+	.middle-line{
+		display: block;
+		// background-color: #4e4e50;
+		border: solid 85px #4e4e50;
+		border-color: #4e4e50 transparent transparent transparent;
+		border-radius: 50%/80px 50px 0 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		bottom: 50%;
+		right: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.house{
+	color: #e54644;
+	background-color: currentColor;
+	width: 100px;
+	height: 70px;
+	margin-right: 100px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+	&.dark-green{
+		color: #2b6939;
+	}
+	&.green{
+		color: #98c632;
+	}
+	&:before, &:after{
+		content: '';
+	    display: block;
+	    background-color: currentColor;
+	    width: 100%;
+	    height: 10px;
+	    position: absolute;
+	}
+	&:before{
+	    border-bottom-left-radius: 25px;
+		top: -28px;
+		left: -32px;
+		transform: rotate(-45deg);
+	}
+	&:after{
+	    border-bottom-right-radius: 25px;
+		top: -28px;
+		right: -32px;
+		transform: rotate(45deg);
+	}
+	.wall{
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 50px solid currentColor;
+		position: absolute;
+		top: -70%;
+	}
+	p{
+		margin: 0;
+		font-family: 'OpenSans';
+		font-size: 20px;
+		line-height: 20px;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+.card{
+	width: 500px;
+	height:  600px;
+	background-color: #000;
+	margin: 0 auto 200px;
+	padding: 20px;
+	position: relative;
+	&:before, &:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		transform: scale(0);
+		top: 20px; // VALOR DO PADDING-TOP DO ELEMENTO `.card`
+	}
+	&:before{
+		width: calc(100% - 40px); // ESSE VALOR DEVE SER A SOMA DOS PADDINGS LATERAIS DO ELEMENTO `.card`
+		height: 2px;
+		transform-origin: left;
+		transition: .3s .3s transform linear;
+	}
+	&:after{
+		width: 2px;
+		height: calc(100% - 40px); // ESSE VALOR DEVE SER A SOMA DOS PADDINGS TOP E BOTTOM DO ELEMENTO `.card`
+		transform-origin: top;
+		right: 20px; // VALOR DO PADDING-RIGHT DO ELEMENTO `.card`
+		transition: .3s transform linear;
+	}
+	&:hover{
+		&:before{
+			transform: scale(1);
+			transition: .3s transform linear;
+		}
+		&:after{
+			transform: scale(1);
+			transition: .3s .3s transform linear;
+		}
+		.box{
+			&:before{
+				transform: scale(1);
+				transition: .3s transform linear;
+			}
+			&:after{
+				transform: scale(1);
+				transition: .3s .3s transform linear;
+			}				
+		}
+	}
+	.box{
+		transform-origin: left;
+		width: 100%;
+		height: 100%;
+		&:before, &:after{
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			transform: scale(0);
+			bottom: 20px; // VALOR DO PADDING-BOTTOM DO ELEMENTO `.card`
+		}
+		&:before{
+			width: calc(100% - 40px); // ESSE VALOR DEVE SER A SOMA DOS PADDINGS LATERAIS DO ELEMENTO `.card`
+			height: 2px;
+			transform-origin: right;
+			transition: .3s .3s transform linear;
+		}
+		&:after{
+			width: 2px;
+			height: calc(100% - 40px); // ESSE VALOR DEVE SER A SOMA DOS PADDINGS TOP E BOTTOM DO ELEMENTO `.card`
+			transform-origin: bottom;
+			left: 20px; // VALOR DO PADDING-LEFT DO ELEMENTO `.card`
+			transition: .3s transform linear;
+		}
+	}
+}
+
